@@ -1,13 +1,28 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.DrawingBoard_Highlighted_Object{
+  animation-name : borderSizeChange;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+@keyframes borderSizeChange {
+  0% {
+    stroke-width: 1;
+    font-size: 1rem;
+  }
+
+  50% {
+    stroke-width: 4;
+    font-size: 1.1rem;
+  }
+  100%{
+    stroke-width: 1;
+    font-size: 1rem;
+  }
 }
